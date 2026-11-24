@@ -32,6 +32,7 @@ main() {
         cp "templates/$target/"{config.yaml,default.mustache} "build/templates/$target/templates"
         template_args+=(-t "$target")
     done
+    ln -sfn ../../schemes/merino build/schemes/merino
     cd build
     rm -rf output
     pybase16 build "${template_args[@]}"
