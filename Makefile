@@ -1,16 +1,14 @@
-SRCS := templates/config.yaml templates/default.mustache build/schemes
-DEST := colors
-
 .PHONY: all help deps update clean
 
-all: $(DEST)
+all:
+	./build.sh
 
 help:
 	@echo "Targets:"
 	@echo "help    show this help message"
 	@echo "deps    install pybase16-builder"
 	@echo "update  clone/pull base16 schemes"
-	@echo "all     build schemes for kitty"
+	@echo "all     build themes for all terminals"
 	@echo "clean   delete scheme repos"
 
 deps:
@@ -18,9 +16,6 @@ deps:
 
 update:
 	./update.sh
-
-$(DEST): $(SRCS)
-	./build.sh
 
 clean:
 	rm -rf build
