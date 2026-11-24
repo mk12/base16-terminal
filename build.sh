@@ -6,7 +6,8 @@ usage() {
     cat <<EOS
 usage: $0 [-h]
 
-Builds Base16 themes in out/kitty/.
+Builds Base16 themes in out/kitty/ and out/ghostty/.
+Rex can import themes from out/ghostty/.
 EOS
 }
 
@@ -23,7 +24,7 @@ main() {
     if ! command -v pybase16 &>/dev/null; then
         die "pybase16: command not found (try 'pip install pybase16-builder')"
     fi
-    local -a targets=(kitty)
+    local -a targets=(kitty ghostty)
     local target
     local -a template_args=()
     for target in "${targets[@]}"; do

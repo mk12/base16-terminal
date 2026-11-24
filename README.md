@@ -1,12 +1,12 @@
-# Base16 Kitty
+# Base16 Terminal
 
-My version of [Base16][] for [kitty][].
+My version of [Base16][] for terminals like [kitty][] and [ghostty][].
 
-It departs from the official [kdrag0n/base16-kitty][] repository in a few ways:
+It departs from [kdrag0n/base16-kitty][] repository in a few ways:
 
 - Different color mapping choices. For example, I use a blue cursor.
 - Always use 256-color variants, but not via base16-shell, which [defeats the purpose of Base16][issue].
-- A build setup geared around only building themes for kitty, not all the templates.
+- A build setup geared around only building themes for terminals, not all the templates.
 - Ability to override theme repositories. I use this for my version of [Solarized][].
 
 ## Usage
@@ -21,10 +21,11 @@ To use a local scheme repository, run `./register.sh path/to/repo`. Next time yo
 
 © 2020 Mitchell Kember
 
-Base16 Kitty is available under the MIT License; see [LICENSE](LICENSE.md) for details.
+Base16 Terminal is available under the MIT License; see [LICENSE](LICENSE.md) for details.
 
 [Base16]: https://github.com/chriskempson/base16
 [kitty]: https://sw.kovidgoyal.net/kitty/
+[ghostty]: https://ghostty.org/
 [kdrag0n/base16-kitty]: https://github.com/kdrag0n/base16-kitty
 [Solarized]: https://github.com/mk12/base16-solarized-scheme
 [issue]: https://web.archive.org/web/20210124190257/https://github.com/chriskempson/base16/issues/174
